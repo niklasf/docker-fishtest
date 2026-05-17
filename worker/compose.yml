@@ -14,3 +14,11 @@ services:
         max-size: 10m
     environment:
       - WORKER_ARGS
+      - HTTP_PROXY
+      - HTTPS_PROXY
+    networks:
+      - default
+
+networks:
+  default:
+    enable_ipv6: true

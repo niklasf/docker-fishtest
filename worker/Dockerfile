@@ -1,6 +1,6 @@
 FROM docker.io/fedora:44
 
-RUN dnf install -y git python3 gcc-c++ make procps-ng && dnf clean all
+RUN dnf install -y git python3 python3-pysocks gcc-c++ make procps-ng && dnf clean all
 
 RUN adduser -m worker
 USER worker
