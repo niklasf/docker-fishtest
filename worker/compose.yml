@@ -1,13 +1,10 @@
 services:
   fishtest-worker:
-    restart: always
+    restart: false
     build:
       dockerfile: ./Dockerfile
-    stop_grace_period: 1m30s
+    stop_grace_period: 30s
     container_name: fishtest-worker
-    stdin_open: true # docker run -i
-    tty: true        # docker run -t
     shm_size: '1gb'  # for shared network
     environment:
-      - NUM_WORKERS
       - WORKER_ARGS
