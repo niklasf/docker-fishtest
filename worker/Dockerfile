@@ -1,6 +1,6 @@
 FROM docker.io/alpine:3
 
-RUN apk --no-cache add bash git python3 g++ make
+RUN apk --no-cache add bash git python3 make clang compiler-rt llvm
 
 RUN adduser -D worker
 USER worker
