@@ -1,3 +1,3 @@
 #!/bin/sh -e
 
-docker compose exec touch /home/worker/fishtest/worker/fish.exit
+docker compose exec fishtest-worker touch /home/worker/fishtest/worker/fish.exit
