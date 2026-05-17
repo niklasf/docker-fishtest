@@ -1,9 +1,12 @@
 services:
   fishtest-worker:
+    container_name: fishtest-worker
     build:
       dockerfile: ./Dockerfile
     stop_grace_period: 30s
-    container_name: fishtest-worker
     shm_size: '1gb'  # for shared network
+    logging:
+      options:
+        max-size: 10m
     environment:
       - WORKER_ARGS
