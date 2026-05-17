@@ -5,6 +5,10 @@ services:
       dockerfile: ./Dockerfile
     stop_grace_period: 30s
     shm_size: '1gb'  # for shared network
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
     logging:
       options:
         max-size: 10m
