@@ -1,8 +1,8 @@
-FROM docker.io/alpine:3
+FROM docker.io/fedora:44
 
-RUN apk --no-cache add bash git python3 make clang compiler-rt llvm
+RUN dnf install -y git python3 gcc-c++ make procps-ng && dnf clean all
 
-RUN adduser -D worker
+RUN adduser -m worker
 USER worker
 
 WORKDIR /home/worker
