@@ -1,4 +1,4 @@
-FROM docker.io/fedora:44
+FROM docker.io/fedora:45
 
 RUN dnf install -y git python3 python3-pysocks gcc-c++ make procps-ng && dnf clean all
 
