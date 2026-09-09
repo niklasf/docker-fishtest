@@ -4,7 +4,7 @@ services:
     build:
       dockerfile: ./Dockerfile
     stop_grace_period: 30s
-    shm_size: '1gb'  # for shared network
+    shm_size: '1gb'  # for shared network before sf 19
     security_opt:
       - no-new-privileges:true
     cap_drop:
